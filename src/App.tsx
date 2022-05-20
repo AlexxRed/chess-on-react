@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          CHESS
+          CHESS on React
         </a>
       </header>
     </div>
