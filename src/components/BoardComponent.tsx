@@ -1,19 +1,25 @@
+import React from "react";
+import { FC } from "react";
+import { Board } from "../models/Board";
+import CellComponent from "./CellComponents";
 
-const BoardComponent = () => {
+interface BoardProps{
+    board: Board;
+    setBoard: (board: Board) => void;
+}
+
+const BoardComponent: FC<BoardProps> = ({board: Board, setBoard}) => {
     return (
         <div className="board">
-            <div className="cell white"></div>
-            <div className="cell black"></div>
-            <div className="cell white"></div>
-            <div className="cell black"></div>
-            <div className="cell white"></div>
-            <div className="cell black"></div>
-            <div className="cell white"></div>
-            <div className="cell black"></div>
-            <div className="cell white"></div>
-            <div className="cell black"></div>
-            <div className="cell white"></div>
-            <div className="cell black"></div>
+            {Board.cells.map((row, index) => 
+                <React.Fragment key={index}>
+                    {row.map(cell =>
+                        <CellComponent
+                        
+                        />
+                        )}
+            </React.Fragment>
+            )}
         </div>
     )
 }
