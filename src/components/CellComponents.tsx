@@ -8,7 +8,7 @@ interface CellProps{
 const CellComponent: FC<CellProps> = ({cell: Cell}) => {
     return (
         <div className={['cell', Cell.color].join(' ')}>
-            {cell.figure}
+            {Cell.figure?.logo && <img alt="" src={ Cell.figure.logo }/>}
         </div>
     )
 }
