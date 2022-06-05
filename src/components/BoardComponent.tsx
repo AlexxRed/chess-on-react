@@ -30,6 +30,7 @@ const BoardComponent: FC<BoardProps> = ({board, setBoard, currentPlayer, swapPla
 
     useEffect(() => {
         highlightCells()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedCell])
 
     function highlightCells() {
@@ -43,6 +44,8 @@ const BoardComponent: FC<BoardProps> = ({board, setBoard, currentPlayer, swapPla
     }
 
     return (
+        <>
+            <h3>Current Player { currentPlayer?.color}</h3>
         <div className="board">
             {board.cells.map((row, index) => 
                 <React.Fragment key={index}>
@@ -57,6 +60,7 @@ const BoardComponent: FC<BoardProps> = ({board, setBoard, currentPlayer, swapPla
             </React.Fragment>
             )}
         </div>
+        </>
     )
 }
 
