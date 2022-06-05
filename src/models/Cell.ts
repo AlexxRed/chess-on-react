@@ -3,6 +3,9 @@ import { Board } from "./Board";
 import { Figure } from "./figures/Figure";
 
 export class Cell{
+    moveFigure(cell: Cell) {
+        throw new Error("Method not implemented.");
+    }
     readonly x: number;
     readonly y: number;
     readonly color: Сolors;

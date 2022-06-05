@@ -39,3 +39,7 @@
 .white{
   background-color: bisque;
 }
+
+.selected{
+  background-color: rgb(99, 44, 44);
+}
