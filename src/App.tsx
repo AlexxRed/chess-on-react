@@ -22,6 +22,8 @@ function App() {
     <BoardComponent
       board={board}
       setBoard={setBoard}
+      currentPlayer={currentPlayer}
+      swapPlayer={swapPlayer}
     />
   );
 }
